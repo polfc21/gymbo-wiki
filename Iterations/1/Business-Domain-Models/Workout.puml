@@ -1,0 +1,31 @@
+@startuml
+
+!theme crt-green
+
+class Player
+class Trainer
+class Routine
+class Training
+class Exercise
+class Set
+
+package utils{
+}
+
+Player --> Training
+Player --> Exercise
+Player --> Routine
+Player --> utils
+
+Training -down-> Exercise
+Training --> utils
+
+Exercise -right-> Set
+Exercise --> utils
+
+Trainer --> Routine
+Routine --> Training
+
+Player -left- Trainer
+
+@enduml
