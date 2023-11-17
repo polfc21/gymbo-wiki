@@ -1,0 +1,10 @@
+@startuml
+
+!theme crt-green
+package utils {
+    class Location
+    class Multimedia
+    enum Sport
+}
+
+@enduml
