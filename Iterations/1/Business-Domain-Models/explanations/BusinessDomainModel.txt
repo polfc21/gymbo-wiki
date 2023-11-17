@@ -1,0 +1,3 @@
+We need add models of business, extracting all relevant entities of the world that are important by the requirements of our clients.
+This will help us to have the main ideas of this business reality, and it's a good recommendation to start studying this diagrams,
+because will give us a first approach to this project with clients vocabulary.
