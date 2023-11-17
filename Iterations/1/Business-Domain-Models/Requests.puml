@@ -1,0 +1,22 @@
+@startuml
+
+!theme crt-green
+
+class Player
+class Trainer
+class TrainerRequest
+class FriendRequest
+class Notification
+
+Player --> TrainerRequest
+Trainer --> TrainerRequest
+Player -left- Trainer
+Player --> FriendRequest
+Player -- Player
+
+Trainer --> Notification
+Player --> Notification
+TrainerRequest --> Notification
+FriendRequest --> Notification
+
+@enduml
