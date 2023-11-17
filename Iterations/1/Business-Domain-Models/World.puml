@@ -1,0 +1,33 @@
+@startuml
+
+!theme crt-green
+
+class Player
+class Publication
+class Link
+class Like
+class Comment
+class Notification
+
+package utils{}
+package gymbo{}
+
+Player --> Publication
+Player --> Like
+Player --> Comment
+Player --> utils
+Player --> gymbo
+Player --> Notification
+
+Publication --> Link
+Publication --> Like
+Publication --> Comment
+Publication --> utils
+Publication --> Notification
+
+Comment --> Like
+Comment --> Notification
+Like --> Notification
+Link --> gymbo
+
+@enduml
