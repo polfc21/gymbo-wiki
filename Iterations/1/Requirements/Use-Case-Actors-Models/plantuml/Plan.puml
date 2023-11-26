@@ -1,0 +1,26 @@
+@startuml publication
+
+!theme crt-green
+
+usecase RequestPersonalPlanToTrainer as RT
+usecase RequestPersonalPlanToPlayer as RP
+usecase ConfirmTrainerPlan as CT
+usecase ConfirmPlayerPlan as CP
+usecase DeleteTrainerPlan as DT
+usecase DeletePlayerPlan as DP
+usecase ShowTrainerPlans as ST
+usecase ShowPlayerPlans as SP
+
+actor Player as P
+actor Trainer as T
+
+P -down-> RT
+P -up-> CT
+P -left-> DT
+P -right-> ST
+T -down-> RP
+T -up-> CP
+T -left-> DP
+T -right-> SP
+
+@enduml
