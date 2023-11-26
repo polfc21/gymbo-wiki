@@ -1,0 +1,21 @@
+@startuml publication
+
+!theme crt-green
+
+usecase CreateTraining as CT
+usecase EditTraining as ET
+usecase ShowTraining as SI
+usecase ShowTrainingsByMonthAndYear as ST
+usecase DeleteTraining as DT
+usecase AddMultimediaToTraining as MT
+
+actor User as U
+
+U -down-> CT
+U -up-> ET
+U -left-> SI
+U -up-> ST
+U -down-> MT
+U -right-> DT
+
+@enduml
