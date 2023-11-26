@@ -1,0 +1,11 @@
+@startuml
+
+state OPENED_MESSAGES
+
+OPENED_MESSAGES -down-> S1 : System permits add message and send message
+S1 --> S2 : Player add message
+S2 --> S1
+S1 --> S3 : Player send message
+S3 --> OPENED_MESSAGES : System shows messages
+
+@enduml
