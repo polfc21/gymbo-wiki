@@ -1,0 +1,19 @@
+@startuml publication
+
+!theme crt-green
+
+usecase AddSetToExercise as AS
+usecase EditSet as ES
+usecase DeleteSet as DS
+usecase ShowSet as SS
+usecase ShowSet as SE
+
+actor User as U
+
+U -down-> AS
+U -up-> ES
+U -left-> DS
+U -up-> SS
+U -down-> SE
+
+@enduml

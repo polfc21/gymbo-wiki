@@ -1,0 +1,18 @@
+Creating use case and actor models in software development, particularly within the context of the Unified Modeling Language (UML) or frameworks like the Rational Unified Process (RUP), serves several crucial goals:
+
+**Use Case Model Goals:**
+
+1. **Understanding User Interactions:** Use case models aim to describe how users interact with a system to achieve specific goals or tasks. It helps in understanding the functional requirements of the system from the user's perspective.
+2. **Capture System Functionality:** Use cases capture the functional requirements of a system by illustrating the interactions between users (actors) and the system itself. These use cases detail the system's behavior in response to specific actions or events initiated by actors.
+3. **Communication and Collaboration:** Use case diagrams and models provide a visual and textual representation of system requirements, making it easier for stakeholders, including developers, designers, testers, and clients, to understand and discuss the system's functionalities in a clear and concise manner.
+4. **Identifying System Boundaries:** Use case modeling helps in defining the boundaries of the system by identifying actors (roles outside the system) and the interactions (use cases) between these actors and the system itself. This assists in determining the scope of the system being developed.
+5. **Basis for System Design and Testing:** Use cases serve as a foundation for system design and testing. They guide developers in creating system components and functionalities based on the described interactions, and they provide a basis for creating test cases to validate the system's behavior.
+
+**Actor Model Goals:**
+
+1. **Identifying Users and External Entities:** Actors represent the various roles or external entities interacting with the system. These can be human users, other systems, hardware devices, or even time-based triggers that initiate actions within the system.
+2. **Understanding User Roles and Goals:** Actor modeling helps in understanding the different roles users play and their goals in interacting with the system. By identifying and defining actors, the system requirements can be refined based on these various user roles.
+3. **Clarifying System Boundaries:** Actors help in defining the boundaries of the system by distinguishing between those entities that interact with the system and those that exist outside of it. This distinction aids in understanding the dependencies and external influences on the system.
+4. **Supporting Use Case Modeling:** Actors are directly related to use cases; they initiate and interact with use cases within the system. Clear identification and definition of actors assist in constructing comprehensive use case diagrams and models.
+
+In essence, creating use case and actor models facilitates clear communication, requirement understanding, and system scope definition. They serve as foundational tools for software development, assisting in requirements analysis, design, development, and testing phases of the project lifecycle.
