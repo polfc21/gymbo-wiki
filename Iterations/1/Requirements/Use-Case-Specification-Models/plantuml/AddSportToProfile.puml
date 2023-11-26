@@ -1,0 +1,13 @@
+@startuml
+
+state OPENED_PROFILE
+
+OPENED_PROFILE --> S1 : Player requests add sport
+S1 --> S2 : System permits enter sport
+S2 --> S3 : Player introduce sport
+S3 --> S4 : Player confirms
+S3 --> S5 : Player cancels
+S4 --> OPENED_PROFILE : System show added sport message
+S5 --> OPENED_PROFILE
+
+@enduml
