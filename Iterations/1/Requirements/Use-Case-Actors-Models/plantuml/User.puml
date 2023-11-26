@@ -1,0 +1,26 @@
+User Registration and Authentication
+@startuml publication
+
+!theme crt-green
+
+usecase Login as LI
+usecase Logout as LO
+usecase RegisterUser as RE
+usecase ValidateUser as VU
+usecase DeactivateUser as DA
+usecase DeleteUser as DE
+usecase RecoveryPassword as RP
+usecase SetNewPassword as SN
+
+actor User as U
+
+U -up-> LI
+U -up-> LO
+U -right-> RE
+U -right-> VU
+U -left-> DA
+U -left-> DE
+U -down-> RP
+U -down-> SN
+
+@enduml
