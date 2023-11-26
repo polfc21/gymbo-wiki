@@ -1,0 +1,29 @@
+@startuml publication
+
+!theme crt-green
+
+usecase CreatePublication as CP
+usecase EditPublication as EP
+usecase ShowPublication as SP
+usecase ShowPublication as SS
+usecase DeletePublication as DP
+usecase AddMultimediaToPublication as AP
+usecase LinkEntityToPublication as LN
+usecase LinkTrainingToPublication as LT
+usecase LinkExerciseToPublication as LE
+usecase LinkUserToPublication as LU
+
+actor User as U
+
+U -left-> CP
+U -left-> EP
+U -up-> SP
+U -up-> SS
+U -right-> DP
+U -right-> AP
+U -down-> LN
+LN <|-down- LT
+LN <|-down- LE
+LN <|-down- LU
+
+@enduml
