@@ -1,0 +1,22 @@
+@startuml
+
+state OPENED_TRAININGS
+state CH1 <<choice>>
+
+OPENED_TRAININGS --> S1 : Player requests create training
+S1 --> S2 : System permits enter name, description, date, sport, AddExercise, CreateTraining or cancel
+S2 --> S3 : Player introduces name, description, sport and date
+S3 --> S2
+S2 --> AddExerciseToTraining : Player add an exercise
+AddExerciseToTraining --> S2
+S2 --> S4 : Player cancel create training
+S4 --> OPENED_TRAININGS
+S2 --> S5 : Player creates a training
+S5 --> CH1 : System validates data
+CH1 --> OPENED_TRAININGS : System shows message with correct training
+
+CH1 -down-> S6 : [incorrect data]
+S6 --> S7 : System shows training error
+S7 --> OPENED_TRAININGS
+
+@enduml
