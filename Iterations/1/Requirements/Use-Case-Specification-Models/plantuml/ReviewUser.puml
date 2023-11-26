@@ -1,0 +1,14 @@
+@startuml
+
+state OPENED_USER
+
+OPENED_USER -down-> S1 : System permits review user
+S1 --> S2 : Player requests review user
+S2 --> S3 : System permits enter rating, comment, review user or cancel
+S3 --> S4 : Player enter rating and comment
+S4 --> S3
+S3 --> S5 : Player review user
+S5 --> OPENED_USER : System shows review message
+S3 --> S6 : Player cancel
+S6 --> OPENED_USER
+@enduml

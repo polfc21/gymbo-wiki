@@ -1,0 +1,15 @@
+@startuml
+
+state REGISTER_USER
+state INITIAL
+state choice1 <<choice>>
+
+REGISTER_USER --> S1 : System shows to fill name, surnames, username, password, birthDate
+S1 --> S2 : The user introduces name, surnames, username, password, birthDate
+S2 --> choice1 : The system validates data
+choice1 -up-> S6 : [-if empty any field/-if existent username/-if weak Password/-if under 18 y.o]
+S6 -up-> S7 : System shows incorrect user registration with errors
+S7 -up-> REGISTER_USER
+choice1 -down-> INITIAL : System shows correct user registration and initial state
+
+@enduml

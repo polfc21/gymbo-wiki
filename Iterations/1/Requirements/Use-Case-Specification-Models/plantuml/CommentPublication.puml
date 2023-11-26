@@ -1,0 +1,15 @@
+@startuml
+
+state OPENED_PUBLICATIONS
+
+OPENED_PUBLICATIONS -down-> S1 : System permits comment publication
+S1 --> S2 : Player requests comment publication
+S2 --> S3 : System permits enter comment, comment publication or cancel
+S3 --> S4 : Player enter comment
+S4 --> S3
+S3 --> S5 : Player comment publication
+S5 --> OPENED_PUBLICATIONS : System shows comment publication
+S3 --> S6 : Player cancel
+S6 --> OPENED_PUBLICATIONS
+
+@enduml

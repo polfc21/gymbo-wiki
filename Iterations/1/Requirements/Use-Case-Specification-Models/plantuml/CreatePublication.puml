@@ -1,0 +1,24 @@
+@startuml
+
+state OPENED_PUBLICATIONS
+state CH1 <<choice>>
+
+OPENED_PUBLICATIONS --> S1 : Player requests create publication
+S1 --> S2 : System permits enter description, sport, AddMultimediaToPublication, LinkEntityToPublication, CreatePublication or cancel
+S2 --> S3 : Player introduces name, description, sport
+S3 --> S2
+S2 --> AddMultimediaToPublication : Player add multimedia
+AddMultimediaToPublication --> S2
+S2 --> LinkEntityToPublication : Player link entity
+LinkEntityToPublication --> S2
+S2 --> S4 : Player cancel create publication
+S4 --> OPENED_PUBLICATIONS
+S2 --> S5 : Player creates a publication
+S5 --> CH1 : System validates data
+CH1 --> OPENED_PUBLICATIONS : System shows message with correct publication
+
+CH1 -down-> S6 : [incorrect data]
+S6 --> S7 : System shows publication error
+S7 --> OPENED_PUBLICATIONS
+
+@enduml

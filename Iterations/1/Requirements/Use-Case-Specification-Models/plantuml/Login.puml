@@ -1,0 +1,18 @@
+Login
+@startuml
+
+state INITIAL
+state REGISTER_USER
+state OPENED_PROFILE
+state choice1 <<choice>>
+
+INITIAL --> S1 : System shows login and user registration
+S1 -right-> REGISTER_USER : User requests user registration
+S1 --> S2 : The user introduces user and password
+S2 --> choice1 : The system validates data
+choice1 -up-> S6 : [incorrect data]
+S6 -up-> S7 : System shows incorrect login
+S7 -up-> INITIAL
+choice1 -down-> OPENED_PROFILE : System shows user profile
+
+@enduml
