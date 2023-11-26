@@ -1,0 +1,17 @@
+@startuml publication
+
+!theme crt-green
+
+usecase ShowProfile as SP
+usecase AddSportToProfile as AS
+usecase EditProfile as EP
+usecase AddPictureToProfile as AP
+
+actor User as U
+
+U -down-> SP
+U -up-> AS
+U -left-> EP
+U -right-> AP
+
+@enduml
