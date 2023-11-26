@@ -1,0 +1,26 @@
+@startuml publication
+
+!theme crt-green
+
+usecase CreateRoutine as CR
+usecase EditRoutine as ER
+usecase ShowRoutine as SR
+usecase ShowRoutines as SS
+usecase DeleteRoutine as DE
+usecase AddRoutineToPlayer as AR
+
+actor User as U
+actor Player as P
+actor Trainer as T
+
+U <|-- P
+U <|-- T
+
+U -left-> CR
+U -left-> ER
+U -up-> SR
+U -up-> SS
+U -right-> DE
+T -down-> AR
+
+@enduml
