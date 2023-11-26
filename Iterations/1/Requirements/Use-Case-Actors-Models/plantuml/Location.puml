@@ -1,0 +1,21 @@
+@startuml publication
+
+!theme crt-green
+
+usecase AddLocationToUser as AL
+usecase EditLocation as EL
+usecase ShowLocation as SL
+usecase DeleteLocation as DL
+usecase ShowUsersByKilometers as SU
+usecase ShowUsersByKilometersAndSport as SS
+
+actor User as U
+
+U -left-> AL
+U -up-> EL
+U -up-> SS
+U -right-> SL
+U -down-> DL
+U -down-> SU
+
+@enduml
