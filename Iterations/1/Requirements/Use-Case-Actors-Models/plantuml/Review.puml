@@ -1,0 +1,19 @@
+@startuml publication
+
+!theme crt-green
+
+usecase ReviewUser as RU
+usecase ShowReviews as SR
+usecase EditReview as ER
+usecase DeleteReview as DR
+usecase CommentReview as CR
+
+actor User as U
+
+U -left-> RU
+U -up-> SR
+U -up-> ER
+U -right-> DR
+U -down-> CR
+
+@enduml
