@@ -1,0 +1,21 @@
+@startuml publication
+
+!theme crt-green
+
+usecase SendMessage as SM
+usecase ShowMessages as HM
+usecase SendFriendRequest as SR
+usecase ConfirmFriendRequest as CR
+usecase DeleteFriend as DF
+usecase ShowNotifications as SN
+
+actor User as U
+
+U -left-> SM
+U -up-> HM
+U -right-> SR
+U -down-> CR
+U -down-> DF
+U -up-> SN
+
+@enduml
