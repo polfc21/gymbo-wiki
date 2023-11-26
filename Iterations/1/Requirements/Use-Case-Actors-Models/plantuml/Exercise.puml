@@ -1,0 +1,21 @@
+@startuml publication
+
+!theme crt-green
+
+usecase CreateExercise as CE
+usecase EditExercise as EE
+usecase ShowExercise as SE
+usecase ShowExercises as SS
+usecase DeleteExercise as DE
+usecase AddMultimediaToExercise as ME
+
+actor User as U
+
+U -down-> CE
+U -up-> EE
+U -left-> SE
+U -up-> SS
+U -down-> ME
+U -right-> DE
+
+@enduml
