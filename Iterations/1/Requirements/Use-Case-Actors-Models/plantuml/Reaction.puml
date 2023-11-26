@@ -1,0 +1,26 @@
+@startuml publication
+
+!theme crt-green
+
+usecase CommentPublication as CP
+usecase EditComment as EC
+usecase ShowComments as SC
+usecase DeleteComment as DC
+
+usecase LikePublication as LP
+usecase DislikePublication as DP
+usecase LikeComment as LC
+usecase DislikeComment as IC
+
+actor User as U
+
+U -left-> CP
+U -left-> EC
+U -up-> SC
+U -up-> DC
+U -right-> LP
+U -right-> DP
+U -down-> LC
+U -down-> IC
+
+@enduml
