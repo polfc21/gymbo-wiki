@@ -1,0 +1,123 @@
+@startuml
+package models {
+class Training {
++ getDate()
++ getName()
++ getSport()
++ getDescription()
++ getExercises()
++ setDate(date)
++ setName(name)
++ setSport(sport)
++ setDescription(description)
++ addExercise(exercise)
+}
+class Exercise {
++ getName()
++ getSport()
++ getShortDescription()
++ getDescription()
++ getSets()
++ setName(name)
++ setSport(sport)
++ setShortDescription(shortDescription)
++ setDescription(description)
++ addSet(set)
+}
+class Set {
++ getRepetitions()
++ getWeight()
++ getDuration()
++ setRepetitions(repetitions)
++ setWeight(weight)
++ setDuration(duration)
+}
+class Publication {
++ getDescription()
++ getLinkedTrainings()
++ getLinkedExercises()
++ getLinkedUsers()
++ getSport()
++ getLocation()
++ getPictures()
++ getComments()
++ getLikes()
++ setDescription(description)
++ linkTraining(trainingId)
++ linkExercise(exerciseId)
++ linkUser(userId)
++ setSport(sport)
++ setLocation(location)
++ addPhoto(photo)
++ addComment(comment)
++ addLike(like)
+}
+class Comment {
++ getComment()
++ setComment(comment)
+}
+class Like {
++ getLike()
++ setLike(like)
+}
+class Link {
++ getTraining()
++ getExercise()
++ getUser()
++ setTraining(training)
++ setExercise(exercise)
++ setUser(user)
+}
+enum Sport {
+FOOTBALL, PADEL, BASKETBALL, TENNIS, PADEL,
+CLIMBING, SWIMMING
+}
+class Location {
++ getLocation()
++ setLocation(location)
+}
+class Photo {
++ getPhoto()
++ setPhoto(photo)
+}
+class Notifications {
++ getNotifications()
+}
+class Chat {
++ getMessages()
++ sendMessage(message)
+}
+class Message {
++ getMessage()
++ setMessage(message)
+}
+class User {
++ getUsername()
++ getPassword()
++ getEmail()
++ getProfile()
++ setUsername(username)
++ setPassword(password)
++ setEmail(email)
+}
+class Profile {
++ getBirthDate()
++ getName()
++ getSurname()
++ getSports()
++ getPicture()
++ setBirthDate(birthDate)
++ setName(name)
++ setSurname(surname)
++ addSport(sport)
++ setPicture(picture)
+}
+class Review {
++ getComment()
++ getRating()
++ setComment(comment)
++ setRating(rating)
+}
+
+}
+@enduml
