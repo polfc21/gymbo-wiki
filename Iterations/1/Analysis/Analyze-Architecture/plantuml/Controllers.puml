@@ -1,0 +1,39 @@
+@startuml
+
+title Packages - Component Diagram
+
+package controllers {
+class LoginController {
++ login(username, password)
+}
+class RegisterUserController {
++ registerUser(userData)
+}
+class CreateTrainingController {
++ createTraining(trainingData)
+}
+class CreateExerciseController {
++ createExercise(exerciseData)
+}
+class CreatePublication {
++ createPublication(publicationData)
+}
+class UpdateProfileController {
++ addPictureToProfile(picture)
++ addSportToProfile(sport)
+}
+class OpenUsersByKilometersController {
++ findUsersByKilometers(kilometers)
+}
+class ReviewUserController {
++ reviewUser(userId, reviewData)
+}
+class CommentPublicationController {
++ commentPublication (publicationId, comment)
+}
+class SendMessageController {
++ sendMessage(chatId, message)
+}
+}
+
+@enduml
