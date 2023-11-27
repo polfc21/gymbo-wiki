@@ -1,0 +1,31 @@
+@startuml
+
+title Packages - Component Diagram
+
+package views {
+
+package publication {
+class PublicationsView {
++ openPublications()
++ addLike(publicationId)
++ addComment(publicationId)
+}
+PublicationsView o--> LikesView
+PublicationsView o--> CommentsView
+class LikesView {}
+class CommentsView {}
+class CreatePublicationView {
++ setDescription(description)
++ setSport(sport)
++ linkTraining(trainingId)
++ linkExercise(exerciseId)
++ linkUser(userId)
++ setLocation(location)
++ addPhoto(photo)
++ createPublication(publicationData)
+}
+}
+
+}
+
+@enduml

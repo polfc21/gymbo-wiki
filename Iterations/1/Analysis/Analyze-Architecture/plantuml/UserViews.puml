@@ -1,0 +1,58 @@
+@startuml
+
+title Packages - Component Diagram
+
+package views {
+
+package users {
+class LoginView {
++ setUsername(username)
++ setPassword(password)
++ login(username, password)
+}
+class RegisterView {
++ setUsername(username)
++ setPassword(password)
++ setName(name)
++ setSurname(surname)
++ setBirthDate(birthDate)
++ registerUser(userData)
+}
+LoginView o--> RegisterView
+class ProfileView {
++ setPhoto(photo)
++ setName(name)
++ setSurname(surname)
++ addSport(sport)
+}
+ProfileView o--> ChangePasswordView
+ProfileView o--> ReviewsView
+class ChangePasswordView {
++ setNewPassword(password)
++ setRepeatedPassword(repeatedPassword)
++ changePassword(password)
+}
+class ReviewsView {
++ openReviews(userId)
++ openReview(reviewId)
+}
+ReviewsView o--> CreateReviewView
+ReviewsView o--> ReviewView
+class CreateReviewView {
++ setStars(stars)
++ setComment(comment)
++ reviewUser(reviewData)
+}
+class ReviewView {
+}
+class UsersView {
++ setKilometers(kilometers)
++ openUsers(kilometers)
++ openUser(userId)
+}
+UsersView o--> ProfileView
+}
+
+}
+
+@enduml

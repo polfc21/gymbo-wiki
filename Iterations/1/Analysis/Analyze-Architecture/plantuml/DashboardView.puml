@@ -1,0 +1,22 @@
+@startuml
+package views {
+
+class DashboardView {}
+class PublicationsView {}
+class UsersView {}
+class CreatePublicationView {}
+class NotificationsView {}
+class WorkoutView {}
+class ProfileView {}
+class ChatsView {}
+
+DashboardView o--> PublicationsView
+DashboardView o--> UsersView
+DashboardView o--> CreatePublicationView
+DashboardView o--> NotificationsView
+DashboardView o--> WorkoutView
+DashboardView o--> ProfileView
+DashboardView o--> ChatsView
+
+}
+@enduml

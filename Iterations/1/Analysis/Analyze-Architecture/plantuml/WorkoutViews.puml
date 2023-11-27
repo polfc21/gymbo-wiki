@@ -1,0 +1,60 @@
+@startuml
+
+title Packages - Component Diagram
+
+package views {
+
+package workout {
+class WorkoutView {
++ openTrainings()
++ openExercises()
++ openRoutines()
+}
+WorkoutView o--> CalendarView
+WorkoutView o--> ExercisesView
+class CalendarView {
++ setMonth(month)
++ setYear(year)
++ openTrainings(month, year)
++ createTraining()
++ openTrainings()
+}
+CalendarView o--> CreateTrainingView
+CalendarView o--> TrainingsView
+class CreateTrainingView {
++ addExercise()
++ openExercises()
++ setSport(sport)
++ setName(name)
++ setDate(date)
++ createTraining(trainingData)
+}
+CreateTrainingView o--> CreateExerciseView
+class TrainingsView {}
+class ExercisesView {
++ openExercises(sport)
++ setSport(sport)
++ createExercise()
+}
+ExercisesView o--> CreateExerciseView
+class CreateExerciseView {
++ setName(name)
++ setSport(sport)
++ setShortDescription(shortDescription)
++ setDescription(description)
++ addSet()
++ openSets()
++ createExercise(exerciseData)
+}
+CreateExerciseView o--> CreateSetView
+class CreateSetView {
++ setRepetitions(repetitions)
++ setWeight(weight)
++ setDuration(duration)
++ createSet(setData)
+}
+}
+
+}
+
+@enduml

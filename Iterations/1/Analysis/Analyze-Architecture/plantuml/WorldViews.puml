@@ -1,0 +1,26 @@
+@startuml
+
+title Packages - Component Diagram
+
+package views {
+
+package world {
+class ChatsView {
++ openChat(chatId)
+}
+ChatsView o--> ChatView
+class ChatView {
++ setMessage(message)
++ setMultimedia(multimedia)
++ sendMessage(message)
++ sendMultimedia(multimedia)
+}
+class NotificationsView {
++ openNotifications()
++ openPublication(publicationId)
+}
+}
+
+}
+
+@enduml
