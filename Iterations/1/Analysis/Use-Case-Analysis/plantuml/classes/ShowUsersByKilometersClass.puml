@@ -1,0 +1,12 @@
+@startuml
+
+class DashboardView
+class UsersView
+class UserView
+class ChatView
+
+DashboardView --> UsersView
+UsersView --> UserView
+UserView --> ChatView
+
+@enduml
