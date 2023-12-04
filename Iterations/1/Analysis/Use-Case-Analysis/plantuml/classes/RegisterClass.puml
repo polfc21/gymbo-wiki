@@ -1,0 +1,12 @@
+@startuml
+class LoginView
+class RegisterView
+class RegisterController
+class Users
+
+LoginView --> RegisterView
+RegisterView --> RegisterController
+RegisterController --> Users
+RegisterView --> LoginView
+
+@enduml
