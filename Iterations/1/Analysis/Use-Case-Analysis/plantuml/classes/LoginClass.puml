@@ -1,0 +1,10 @@
+@startuml
+class LoginView
+class LoginController
+class Users
+class DashboardView
+
+LoginView --> LoginController
+LoginController --> Users
+LoginView --> DashboardView
+@enduml
