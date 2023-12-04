@@ -1,0 +1,12 @@
+@startuml
+class WorkoutView
+class WorkoutSelector
+class CreateExerciseView
+class ExercisesView
+class CreateExerciseController
+
+WorkoutView --> WorkoutSelector
+WorkoutSelector --> CreateExerciseView
+WorkoutSelector --> ExercisesView
+CreateExerciseView --> CreateExerciseController
+@enduml
