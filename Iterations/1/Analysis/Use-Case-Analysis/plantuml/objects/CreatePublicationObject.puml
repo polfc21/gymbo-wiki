@@ -1,0 +1,18 @@
+@startuml
+
+object user
+object createPublicationView
+object addLocationView
+object addPhotoView
+object createPublicationController
+object publications
+
+user -down-> createPublicationView : setDescription(), addSport(), linkEntity(), addLocation(), addPhoto(), createPublication()
+createPublicationView -down-> addLocationView : addLocation()
+user -down addLocationView : addLocation()
+createPublicationView -down-> addPhotoView : addPhoto()
+user -down addPhotoView : addPhoto()
+createPublicationView -down-> createPublicationController : createPublication(publicationData)
+createPublicationController -down-> publications : savePublication(publicationData)
+
+@enduml
