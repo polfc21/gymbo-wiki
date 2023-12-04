@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object user
+object publicationView
+object commentsView
+object commentController
+object comments
+
+user --> publicationView
+publicationView --> commentsView : getComments()
+user --> commentsView : setComment(comment), commentPublication(commentData)
+commentsView --> commentController : commentPublication(commentData)
+commentController --> comments : saveComment(commentData)
+
+@enduml

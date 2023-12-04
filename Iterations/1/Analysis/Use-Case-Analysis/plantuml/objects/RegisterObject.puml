@@ -1,0 +1,16 @@
+@startuml
+
+object user
+object loginView
+object registerView
+object registerController
+object users
+
+user -left-> loginView : registerUser()
+loginView -right-> registerView : registerUser()
+user -down-> registerView : setUsername(), setEmail(), setName(), setPassword(), setSurnames(), setBirthDate()
+registerView -down-> registerController : registerUser(userData)
+registerController -right-> users : findByUsername(username), saveUser(userData)
+registerView -up-> loginView
+
+@enduml

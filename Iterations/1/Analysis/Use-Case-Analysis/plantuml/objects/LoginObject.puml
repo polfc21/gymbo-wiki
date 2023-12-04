@@ -1,0 +1,14 @@
+@startuml
+
+object user
+object loginView
+object loginController
+object users
+object dashboardView
+
+user -down-> loginView : setUsername(), setPassword(), login(username, password)
+loginView -right-> loginController : login(username, password)
+loginController -down-> users : findByUsername()
+loginView -down-> dashboardView
+
+@enduml

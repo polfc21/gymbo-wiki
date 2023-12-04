@@ -1,0 +1,10 @@
+@startuml
+
+class DashboardView
+class CreatePublicationView
+class CreatePublicationController
+
+DashboardView --> CreatePublicationView
+CreatePublicationView --> CreatePublicationController
+
+@enduml

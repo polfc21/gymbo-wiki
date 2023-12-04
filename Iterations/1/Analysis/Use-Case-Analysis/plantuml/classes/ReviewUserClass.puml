@@ -1,0 +1,14 @@
+@startuml
+
+class UsersView
+class UserView
+class ReviewsView
+class AddReviewView
+class AddReviewController
+
+UsersView --> UserView
+UserView --> ReviewsView
+UserView --> AddReviewView
+AddReviewView --> AddReviewController
+
+@enduml

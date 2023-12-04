@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object user
+object profileView
+object addPictureToProfileView
+object addPictureToProfileController
+object profiles
+
+user --> profileView : viewProfile(), setName(), setBirthDate()
+profileView --> addPictureToProfileView : addPicture()
+user --> addPictureToProfileView : addPicture()
+addPictureToProfileView --> addPictureToProfileController : addPicture(pictureData)
+addPictureToProfileController --> profiles : savePicture(pictureData)
+
+@enduml
