@@ -1,0 +1,18 @@
+@startuml
+
+class UsersView
+class UserView
+class ChatView
+class ShowProfileView
+class SendMessageView
+class SendMessageController
+
+UsersView --> UserView
+UserView --> ChatView
+UserView --> ShowProfileView
+UserView --> AddReviewView
+AddReviewView --> AddReviewController
+ChatView --> SendMessageView
+SendMessageView --> SendMessageController
+
+@enduml
