@@ -1,0 +1,16 @@
+@startuml
+
+class WorldView
+class PublicationView
+class LinksView
+class LikesView
+class CommentsView
+class CommentController
+
+WorldView --> PublicationView
+PublicationView --> LinksView
+PublicationView --> LikesView
+PublicationView --> CommentsView
+CommentsView --> CommentController
+
+@enduml
