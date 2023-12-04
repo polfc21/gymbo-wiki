@@ -1,0 +1,15 @@
+@startuml
+
+object user
+object createTrainingView
+object addExerciseView
+object createTrainingController
+object trainings
+
+user -down-> createTrainingView : setName(), setSport(), setDate(), setDescription(), createTraining()
+user -down-> addExerciseView : addExercise()
+createTrainingView -down-> addExerciseView : addExercise()
+createTrainingView -down-> createTrainingController : createTraining(trainingData)
+createTrainingController -down-> trainings : saveTraining(trainingData)
+
+@enduml
