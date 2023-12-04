@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object user
+object profileView
+object addSportToProfileView
+object addSportToProfileController
+object profiles
+
+user --> profileView : viewProfile(), setName(), setBirthDate()
+profileView --> addSportToProfileView : addSport()
+user --> addSportToProfileView : addSport()
+addSportToProfileView --> addSportToProfileController : addSport(sport)
+addSportToProfileController --> profiles : saveSport(sport)
+
+@enduml
