@@ -1,0 +1,98 @@
+@startuml
+
+title Packages - Component Diagram
+
+package views {
+    class DashboardView
+    package auth {
+        class LoginView {
+            + setUsername(username)
+            + setPassword(password)
+            + login(username, password)
+        }
+        class RegisterView {
+            + setUsername(username)
+            + setPassword(password)
+            + setName(name)
+            + setSurname(surname)
+            + setBirthDate(birthDate)
+            + registerUser(userData)
+        }
+        LoginView o--> RegisterView
+    }
+    package users {
+        class ProfileView {
+            + getProfile()
+            + setPhoto(photo)
+            + setName(name)
+            + setSurname(surname)
+            + addSport()
+            + addPicture()
+            + getReviews()
+            + sendMessage()
+        }
+        class AddPictureView {
+            + setPicture(picture)
+            + addPicture(picture)
+        }
+        class AddSportView {
+            + setSport(sport)
+            + addSport(sport)
+        }
+        class ChangePasswordView {
+            + setNewPassword(password)
+            + setRepeatedPassword(repeatedPassword)
+            + changePassword(password)
+        }
+        class UsersView {
+            + showUsers(kilometers)
+            + setKilometers(kilometers)
+            + openUsers(kilometers)
+            + openUser(userId)
+        }
+        DashboardView o--> UsersView
+        DashboardView o--> ProfileView
+        UsersView o--> ProfileView
+        ProfileView o-down-> ChangePasswordView
+        ProfileView o-down-> AddPictureView
+        ProfileView o-down-> AddSportView
+    }
+    package reviews {
+        class ReviewsView {
+            + openReviews(userId)
+            + openReview(reviewId)
+        }
+        class CreateReviewView {
+            + setStars(stars)
+            + setComment(comment)
+            + reviewUser(reviewData)
+        }
+        class ReviewView {
+            + getComment()
+            + getStars()
+        }
+        ReviewsView o--> CreateReviewView
+        ReviewsView o--> ReviewView
+    }
+    package world {
+        class ChatsView {
+            + openChat(chatId)
+        }
+        class ChatView {
+            + setMessage(message)
+            + setMultimedia(multimedia)
+            + sendMessage(message)
+            + sendMultimedia(multimedia)
+        }
+        class NotificationsView {
+            + openNotifications()
+            + openPublication(publicationId)
+        }
+        DashboardView o--> ChatsView
+        DashboardView o--> NotificationsView
+        ChatsView o--> ChatView
+    }
+    ProfileView o-down-> ReviewsView
+    ProfileView o-down-> ChatView
+}
+@enduml
