@@ -1,0 +1,64 @@
+@startuml
+
+title Publication View Diagram
+
+class DashboardView {
+    + openPublications()
+    + createPublication()
+}
+
+package publications {
+    class PublicationsView {
+        + openPublications()
+    }
+    class PublicationView {
+        + getComments()
+        + getLikes()
+        + getLinks()
+    }
+    class LikesView {
+        + addLike(publicationId)
+        + removeLike(publicationId)
+    }
+    class CommentsView {
+        + setComment(comment)
+        + commentPublication(commentData)
+    }
+    class LinksView {
+        + getExercise(exerciseId)
+        + getTraining(trainingId)
+        + getUser(userId)
+    }
+    class CreatePublicationView {
+        + setDescription(description)
+        + setSport(sport)
+        + linkEntity()
+        + addLocation()
+        + addPhoto()
+        + createPublication(publicationData)
+    }
+    class AddPhotoView {
+        + addPhoto(photo)
+    }
+    class AddLocationView {
+        + setLocation(location)
+    }
+    class AddLinkView {
+        + linkTraining(trainingId)
+        + linkExercise(exerciseId)
+        + linkUser(userId)
+    }
+    DashboardView o--> PublicationsView
+    DashboardView o--> CreatePublicationView
+
+    PublicationsView o--> PublicationView
+    PublicationView o--> LikesView
+    PublicationView o--> CommentsView
+    PublicationView o--> LinksView
+
+    CreatePublicationView o--> AddLocationView
+    CreatePublicationView o--> AddPhotoView
+    CreatePublicationView o--> AddLinkView
+}
+
+@enduml
